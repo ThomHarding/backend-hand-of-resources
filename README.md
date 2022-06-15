@@ -38,7 +38,6 @@ Finally, once you’ve built out all the routes, deploy your API to Heroku and g
 
 ## Rubric ##
 
-
 | Task   |   |   |   | Points   |
 |---       |---|---|---|---|
 | Create  | test  | model  | route  | 0.5  |
