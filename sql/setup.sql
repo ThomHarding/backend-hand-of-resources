@@ -64,4 +64,4 @@ INSERT INTO superheroes (
 VALUES
   ('Skitter', 'Taylor Hebert', 'None', 'Brockton Bay')
   ('One For All', 'Toshinori Yagi', 'All For One', 'Tokyo')
-  ('Morbius', 'Dr. Michael Morbius', 'Spider-Man', 'New York')
+  ('Morbius', 'Dr. Michael Morbius', 'Spider-Man', 'New York City')
