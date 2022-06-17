@@ -37,7 +37,7 @@ describe('superhero routes', () => {
         foe_name: 'Red Skull',
         hometown: 'New York City' });
     expect(resp.status).toBe(200);
-    expect(resp.body.name).toBe(' Captain America');
+    expect(resp.body.name).toBe('Captain America');
   });
 
   it('PUT /superheroes/:id should update superhero', async () => {

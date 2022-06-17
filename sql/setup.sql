@@ -26,7 +26,8 @@ CREATE TABLE superheroes (
   real_name VARCHAR,
   foe_name VARCHAR,
   hometown VARCHAR
-)
+);
+
 INSERT INTO dogs (
   name,
   age,
@@ -51,9 +52,8 @@ VALUES
   ('Brazil', 216, 'Brasília', 'BRL'),
   ('Canada', 38, 'Ottawa', 'CAD'),
   ('Lithuania', 2, 'Vilnius', 'EUR'),
-  ('Australia', 25, 'Canberra', 'AUD')
+  ('Australia', 25, 'Canberra', 'AUD');
 
-  
 
 INSERT INTO superheroes (
   name,
@@ -62,6 +62,6 @@ INSERT INTO superheroes (
   hometown
 )
 VALUES
-  ('Skitter', 'Taylor Hebert', 'None', 'Brockton Bay')
-  ('One For All', 'Toshinori Yagi', 'All For One', 'Tokyo')
-  ('Morbius', 'Dr. Michael Morbius', 'Spider-Man', 'New York City')
+  ('Skitter', 'Taylor Hebert', 'None', 'Brockton Bay'),
+  ('One For All', 'Toshinori Yagi', 'All For One', 'Tokyo'),
+  ('Morbius', 'Dr. Michael Morbius', 'Spider-Man', 'New York City');
