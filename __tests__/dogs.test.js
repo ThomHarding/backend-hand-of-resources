@@ -29,9 +29,6 @@ describe('dog routes', () => {
       eyes: 'blue',
       fur: 'tan'
     };
-    console.log(soup);
-    console.log('bruh');
-    console.log(res.body);
     expect(res.body).toEqual(soup);
   });
 

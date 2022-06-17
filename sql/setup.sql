@@ -10,6 +10,14 @@ CREATE TABLE dogs (
   fur VARCHAR
 );
 
+CREATE TABLE countries (
+  country_id BIGINT GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
+  name VARCHAR NOT NULL,
+  population INT,
+  capital VARCHAR,
+  currency VARCHAR
+);
+
 INSERT INTO dogs (
   name,
   age,
@@ -23,3 +31,15 @@ VALUES
   ('Pasta', 1, 'yellow', 'gold'),
   ('Howard', 9, 'red', 'brown')
   ;
+
+INSERT INTO countries (
+  name,
+  population,
+  capital,
+  currency
+)
+VALUES
+  ('Brazil,', 216, 'Brasília', 'BRL'),
+  ('Canada', 38, 'Ottawa', 'CAD'),
+  ('Lithuania', 2, 'Vilnius', 'EUR'),
+  ('Australia', 25, 'Canberra', 'AUD')
