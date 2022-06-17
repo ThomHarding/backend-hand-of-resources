@@ -2,6 +2,7 @@
 -- The SQL in this file will be executed when you run `npm run setup-db`
 DROP TABLE IF EXISTS dogs;
 DROP TABLE IF EXISTS countries;
+DROP TABLE IF EXISTS superheroes;
 
 CREATE TABLE dogs (
   dog_id BIGINT GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
@@ -19,6 +20,13 @@ CREATE TABLE countries (
   currency VARCHAR
 );
 
+CREATE TABLE superheroes (
+  superhero_id BIGINT GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
+  name VARCHAR NOT NULL,
+  real_name VARCHAR,
+  foe_name VARCHAR,
+  hometown VARCHAR
+)
 INSERT INTO dogs (
   name,
   age,
@@ -44,3 +52,16 @@ VALUES
   ('Canada', 38, 'Ottawa', 'CAD'),
   ('Lithuania', 2, 'Vilnius', 'EUR'),
   ('Australia', 25, 'Canberra', 'AUD')
+
+  
+
+INSERT INTO superheroes (
+  name,
+  real_name,
+  foe_name,
+  hometown
+)
+VALUES
+  ('Skitter', 'Taylor Hebert', 'None', 'Brockton Bay')
+  ('One For All', 'Toshinori Yagi', 'All For One', 'Tokyo')
+  ('Morbius', 'Dr. Michael Morbius', 'Spider-Man', 'New York')
