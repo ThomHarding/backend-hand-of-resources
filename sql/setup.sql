@@ -3,7 +3,7 @@
 DROP TABLE IF EXISTS dogs;
 DROP TABLE IF EXISTS countries;
 DROP TABLE IF EXISTS superheroes;
-DROP TABLE IF EXISTS classes;
+DROP TABLE IF EXISTS dndClasses;
 
 CREATE TABLE dogs (
   dog_id BIGINT GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
@@ -29,8 +29,8 @@ CREATE TABLE superheroes (
   hometown VARCHAR
 );
 
-CREATE TABLE classes (
-  class_id BIGINT GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
+CREATE TABLE dndClasses (
+  dndClass_id BIGINT GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
   name VARCHAR NOT NULL,
   primary_stat VARCHAR,
   original_edition FLOAT,
@@ -75,7 +75,7 @@ VALUES
   ('One For All', 'Toshinori Yagi', 'All For One', 'Tokyo'),
   ('Morbius', 'Dr. Michael Morbius', 'Spider-Man', 'New York City');
 
-INSERT INTO classes (
+INSERT INTO dndClasses (
   name,
   primary_stat,
   original_edition,
