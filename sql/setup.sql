@@ -4,6 +4,7 @@ DROP TABLE IF EXISTS dogs;
 DROP TABLE IF EXISTS countries;
 DROP TABLE IF EXISTS superheroes;
 DROP TABLE IF EXISTS dndClasses;
+DROP TABLE IF EXISTS stars;
 
 CREATE TABLE dogs (
   dog_id BIGINT GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
@@ -16,7 +17,7 @@ CREATE TABLE dogs (
 CREATE TABLE countries (
   country_id BIGINT GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
   name VARCHAR NOT NULL,
-  population INT,
+  population INT, -- in millions
   capital VARCHAR,
   currency VARCHAR
 );
@@ -37,6 +38,13 @@ CREATE TABLE dndClasses (
   caster BOOLEAN
 );
 
+CREATE TABLE stars (
+  star_id BIGINT GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
+  name VARCHAR NOT NULL,
+  type VARCHAR,
+  distance FLOAT -- in light years
+);
+
 INSERT INTO dogs (
   name,
   age,
@@ -48,8 +56,7 @@ VALUES
   ('Cricket', 16, 'black', 'brown'),
   ('Bear', 8, 'brown', 'black'),
   ('Pasta', 1, 'yellow', 'gold'),
-  ('Howard', 9, 'red', 'brown')
-  ;
+  ('Howard', 9, 'red', 'brown');
 
 INSERT INTO countries (
   name,
@@ -90,6 +97,16 @@ VALUES
   ('Warlock', 'Charisma', 4, true),
   ('Paladin', 'Charisma', 3, true),
   ('Druid', 'Wisdom', 2, true),
-  ('Rogue', 'Dexterity', 1, false)
-  ;
+  ('Rogue', 'Dexterity', 1, false);
   
+INSERT INTO stars (
+  name,
+  type,
+  distance
+)
+VALUES
+  ('Epsilon Indi A', 'Orange Dwarf', 11.8),
+  ('DX Cancri', 'Red Dwarf', 11.6),
+  ('The Sun', 'Yellow Dwarf', 0),
+  ('PSR J0108-1431', 'Neutron Star', 424),
+  ('Aldebaran', 'Red Giant', 65.3);
