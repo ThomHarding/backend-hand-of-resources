@@ -26,14 +26,14 @@ describe('dndClass routes', () => {
 
   it('/dndClasses/:id should return dndClass detail', async () => {
     const res = await request(app).get('/dndClasses/1');
-    const soup = {
+    const fighter = {
       id: '1',
-      name: 'Soup',
-      primary_stat: 3,
-      original_edition: 'blue',
-      caster: 'tan'
+      name: 'Fighter',
+      primary_stat: 'Strength',
+      original_edition: 1,
+      caster: false
     };
-    expect(res.body).toEqual(soup);
+    expect(res.body).toEqual(fighter);
   });
 
   it('POST /dndClasses should create a new dndClass', async () => {

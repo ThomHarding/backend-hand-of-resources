@@ -88,7 +88,7 @@ VALUES
   ('Artificer', 'Intelligence', 3.5, true),
   ('Cleric', 'Wisdom', 1, true),
   ('Warlock', 'Charisma', 4, true),
-  ('Paladin', 'Charisma', 3, true)
+  ('Paladin', 'Charisma', 3, true),
   ('Druid', 'Wisdom', 2, true),
   ('Rogue', 'Dexterity', 1, false)
   ;
