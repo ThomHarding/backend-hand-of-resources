@@ -3,6 +3,7 @@
 DROP TABLE IF EXISTS dogs;
 DROP TABLE IF EXISTS countries;
 DROP TABLE IF EXISTS superheroes;
+DROP TABLE IF EXISTS classes;
 
 CREATE TABLE dogs (
   dog_id BIGINT GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
@@ -26,6 +27,14 @@ CREATE TABLE superheroes (
   real_name VARCHAR,
   foe_name VARCHAR,
   hometown VARCHAR
+);
+
+CREATE TABLE classes (
+  class_id BIGINT GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
+  name VARCHAR NOT NULL,
+  primary_stat VARCHAR,
+  original_edition FLOAT,
+  caster BOOLEAN
 );
 
 INSERT INTO dogs (
@@ -65,3 +74,22 @@ VALUES
   ('Skitter', 'Taylor Hebert', 'None', 'Brockton Bay'),
   ('One For All', 'Toshinori Yagi', 'All For One', 'Tokyo'),
   ('Morbius', 'Dr. Michael Morbius', 'Spider-Man', 'New York City');
+
+INSERT INTO classes (
+  name,
+  primary_stat,
+  original_edition,
+  caster
+)
+VALUES 
+  ('Fighter', 'Strength', 1, false),
+  ('Wizard', 'Intelligence', 1, true),
+  ('Sorcerer', 'Charisma', 2, true),
+  ('Artificer', 'Intelligence', 3.5, true),
+  ('Cleric', 'Wisdom', 1, true),
+  ('Warlock', 'Charisma', 4, true),
+  ('Paladin', 'Charisma', 3, true)
+  ('Druid', 'Wisdom', 2, true),
+  ('Rogue', 'Dexterity', 1, false)
+  ;
+  
