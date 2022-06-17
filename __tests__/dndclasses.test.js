@@ -8,8 +8,8 @@ describe('dndClass routes', () => {
     return setup(pool);
   });
 
-  it('/dndClasses should return a list of dndClasses', async () => {
-    const resp = await request(app).get('/dndClasses');
+  it('/dndclasses should return a list of dndclasses', async () => {
+    const resp = await request(app).get('/dndclasses');
     expect(resp.status).toBe(200);
     expect(resp.body).toEqual([
       { id: '1', name: 'Fighter', primary_stat: 'Strength' },
@@ -24,8 +24,8 @@ describe('dndClass routes', () => {
     ]);
   });
 
-  it('/dndClasses/:id should return dndClass detail', async () => {
-    const res = await request(app).get('/dndClasses/1');
+  it('/dndclasses/:id should return dndClass detail', async () => {
+    const res = await request(app).get('/dndclasses/1');
     const fighter = {
       id: '1',
       name: 'Fighter',
@@ -36,28 +36,28 @@ describe('dndClass routes', () => {
     expect(res.body).toEqual(fighter);
   });
 
-  it('POST /dndClasses should create a new dndClass', async () => {
-    const resp = await request(app).post('/dndClasses').send(
+  it('POST /dndclasses should create a new dndClass', async () => {
+    const resp = await request(app).post('/dndclasses').send(
       { name: 'Monk', primary_stat: 'Wisdom', original_edition: 2, caster: false
       });
     expect(resp.status).toBe(200);
     expect(resp.body.name).toBe('Monk');
   });
 
-  it('PUT /dndClasses/:id should update dndClass', async () => {
+  it('PUT /dndclasses/:id should update dndClass', async () => {
     const resp = await request(app)
-      .put('/dndClasses/2')
+      .put('/dndclasses/2')
       .send({ name: 'Magic-User' });
     //which is, i found out today, the actual original name of the class
     expect(resp.status).toEqual(200);
     expect(resp.body.name).toEqual('Magic-User');
   });
 
-  it('DELETE /dndClasses/:id should delete a dndClass', async () => {
-    const resp = await request(app).delete('/dndClasses/2');
+  it('DELETE /dndclasses/:id should delete a dndClass', async () => {
+    const resp = await request(app).delete('/dndclasses/2');
     expect(resp.status).toEqual(200);
 
-    const { body } = await request(app).get('/dndClasses/2');
+    const { body } = await request(app).get('/dndclasses/2');
     expect(body).toEqual('');
   });
 

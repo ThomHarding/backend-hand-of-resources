@@ -3,7 +3,7 @@
 DROP TABLE IF EXISTS dogs;
 DROP TABLE IF EXISTS countries;
 DROP TABLE IF EXISTS superheroes;
-DROP TABLE IF EXISTS dndClasses;
+DROP TABLE IF EXISTS dndclasses;
 DROP TABLE IF EXISTS stars;
 
 CREATE TABLE dogs (
@@ -30,7 +30,7 @@ CREATE TABLE superheroes (
   hometown VARCHAR
 );
 
-CREATE TABLE dndClasses (
+CREATE TABLE dndclasses (
   dndClass_id BIGINT GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
   name VARCHAR NOT NULL,
   primary_stat VARCHAR,
@@ -82,7 +82,7 @@ VALUES
   ('One For All', 'Toshinori Yagi', 'All For One', 'Tokyo'),
   ('Morbius', 'Dr. Michael Morbius', 'Spider-Man', 'New York City');
 
-INSERT INTO dndClasses (
+INSERT INTO dndclasses (
   name,
   primary_stat,
   original_edition,
