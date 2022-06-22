@@ -5,6 +5,7 @@ DROP TABLE IF EXISTS countries;
 DROP TABLE IF EXISTS superheroes;
 DROP TABLE IF EXISTS dndclasses;
 DROP TABLE IF EXISTS stars;
+DROP TABLE IF EXISTS hats;
 
 CREATE TABLE dogs (
   dog_id BIGINT GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
@@ -43,6 +44,13 @@ CREATE TABLE stars (
   name VARCHAR NOT NULL,
   type VARCHAR,
   distance FLOAT -- in light years
+);
+
+CREATE TABLE hats (
+  hat_id BIGINT GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
+  name VARCHAR NOT NULL,
+  color INT,
+  width INT
 );
 
 INSERT INTO dogs (
@@ -110,3 +118,13 @@ VALUES
   ('The Sun', 'Yellow Dwarf', 0),
   ('PSR J0108-1431', 'Neutron Star', 424),
   ('Aldebaran', 'Red Giant', 65.3);
+
+INSERT INTO hats (
+  name,
+  color,
+  width
+)
+VALUES 
+  ('Stetson', 3, 1, 15),
+  ('Top Hat', 2, 4),
+  ('Baldness', 14, 500);
