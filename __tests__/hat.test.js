@@ -3,7 +3,7 @@ const setup = require('../data/setup');
 const request = require('supertest');
 const app = require('../lib/app');
 
-describe('star routes', () => {
+describe('hat routes', () => {
   beforeEach(() => {
     return setup(pool);
   });
@@ -18,6 +18,16 @@ describe('star routes', () => {
     ]);
   });
 
+  it('/hats/:id should return hat detail', async () => {
+    const res = await request(app).get('/hats/1');
+    const testHat = {
+      id: '1',
+      name: 'Stetson',
+      color: 2,
+      width: 4
+    };
+    expect(res.body).toEqual(testHat);
+  });
 
   afterAll(() => {
     pool.end();
