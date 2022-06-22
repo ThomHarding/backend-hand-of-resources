@@ -125,6 +125,6 @@ INSERT INTO hats (
   width
 )
 VALUES 
-  ('Stetson', 3, 1, 15),
+  ('Stetson', 3, 1),
   ('Top Hat', 2, 4),
   ('Baldness', 14, 500);
