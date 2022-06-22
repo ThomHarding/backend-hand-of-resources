@@ -23,8 +23,8 @@ describe('hat routes', () => {
     const testHat = {
       id: '1',
       name: 'Stetson',
-      color: 2,
-      width: 4
+      color: 3,
+      width: 1
     };
     expect(res.body).toEqual(testHat);
   });
