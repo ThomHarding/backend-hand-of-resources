@@ -28,6 +28,13 @@ describe('hat routes', () => {
     };
     expect(res.body).toEqual(testHat);
   });
+  
+  it('POST /hats should create a new hat', async () => {
+    const resp = await request(app).post('/hats').send(
+      { name: 'Bowler Cap', color: 6, width: 2 });
+    expect(resp.status).toBe(200);
+    expect(resp.body.name).toBe('Bowler Cap');
+  });
 
   afterAll(() => {
     pool.end();
