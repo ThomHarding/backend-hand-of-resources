@@ -44,6 +44,14 @@ describe('hat routes', () => {
     expect(body).toEqual('');
   });
 
+  it('PUT /hats/:id should update hat', async () => {
+    const resp = await request(app)
+      .put('/hats/3')
+      .send({ name: 'None' });
+    expect(resp.status).toEqual(200);
+    expect(resp.body.name).toEqual('None');
+  });
+
   afterAll(() => {
     pool.end();
   });
